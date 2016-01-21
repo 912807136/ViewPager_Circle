@@ -35,7 +35,6 @@ public class MainActivity extends Activity {
 	@SuppressLint("HandlerLeak")
 	private Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
-//			Log.i("mytag", "viewPager.getCurrentItem():"+viewPager.getCurrentItem());
 			viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
 			handler.sendEmptyMessageDelayed(0, delayTime);
 		};
@@ -175,7 +174,7 @@ public class MainActivity extends Activity {
 			position = position % dataList.size();
 			ImageView imageView = imageList.get(position);
 			container.addView(imageView);
-			x.image().bind(imageView, dataList.get(position).getUrl(), imageOptions);
+			x.image().bind(imageView, dataList.get(position).getUrl(), imageOptions);  
 			return imageView;
 		}
 
